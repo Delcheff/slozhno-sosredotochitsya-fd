@@ -3,3 +3,141 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header__decorated-zone {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  background-image: url(../images/cover-image-dark.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  block-size: 100vh;
+  min-block-size: 100vh;
+  justify-items: end;
+  align-items: center;
+}
+
+
+/*Иконка записи*/
+.header__decoration-element{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  inline-size: 61px;
+  block-size: 25px;
+  gap:10px;
+  flex-direction: row;
+  top: 20px;
+  right: 20px;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  color: var(--accent-text-color);
+  
+}
+.header__decoration-element::after{
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-text-color);
+  border-radius: 50%;
+  outline: 2px solid transparent;
+  box-shadow: 0px 0px 2px 3px var(--trans-border-color);
+}
+
+.header__decorated-zone::after{
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  align-self: end;
+  justify-self: start;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-end: 1px solid var(--accent-text-color);
+  border-inline-start: 1px solid var(--accent-text-color);
+}
+
+.header__decorated-zone::before{
+
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  align-self: start;
+  justify-self: end;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-start: 1px solid var(--accent-text-color);
+  border-inline-end: 1px solid var(--accent-text-color);
+}
+
+/*Меню*/
+.header__theme-menu {
+  justify-self: center;
+  align-self: start;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  gap: 10px;
+}
+
+.header__theme-menu-button{
+  display: flex;
+  flex-direction: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  color: var(--accent-text-color);
+  text-transform: lowercase;
+  padding: 0px 13px;
+  block-size: 26px;
+}
+
+.header__theme-menu-button_active{
+  outline: 1px solid var(--accent-text-color);
+}
+
+.header__theme-menu-button:hover{
+  outline: 1px solid var(--trans-border-color);
+}
+
+.header__theme-menu-button:focus{
+  outline: none;
+  border-block-end: 1px solid var(--accent-text-color);
+  box-sizing: border-box;
+}
+/*Заголовок*/
+.header__title{
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: bold;
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-text-color);
+  align-self: center;
+  justify-self: start;
+  margin-inline-start: -20px;
+
+}
+/*Блок текста*/
+.contrast-title{
+  position: relative;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--contrast-text-color);
+  background-color: var(--contrast-color);
+  inline-size: 50%;
+  justify-self: end;
+  align-self: center;
+  justify-items: end;
+  align-items: center;
+  margin-block-start: -35px;
+  word-break: break-all;
+}
