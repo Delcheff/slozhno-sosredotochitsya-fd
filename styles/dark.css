@@ -15,6 +15,6 @@
     --contrast-text-color: #000028;
     --contrast-color: #FF0070;
     --main-title-color: #DB00FF;
-    --background_main: url('../images/cover-image-dark.png');
-    --background-color_main: #000028;
+    --background-img-main: url('../images/cover-image-dark.png');
+    --background-color-main: #000028;
 }

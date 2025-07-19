@@ -15,8 +15,8 @@
   --contrast-text-color: #353430;
   --contrast-color: #FF8DCB;
   --main-title-color: #FFC2E6;
-  --background_main: url('../images/cover-image-light.png');
-  --background-color_main: #FFF1F7;
+  --background-img-main: url('../images/cover-image-light.png');
+  --background-color-main: #FFF1F7;
 }
 
 .theme-light .header__decoration-element {
@@ -38,8 +38,8 @@
   --contrast-text-color: #353430;
   --contrast-color: #FF8DCB;
   --main-title-color: #FFC2E6;
-  --background_main: url('../images/cover-image-light.png');
-  --background-color_main: #FFF1F7;
+  --background-img-main: url('../images/cover-image-light.png');
+  --background-color-main: #FFF1F7;
   }
 
   /* Остальные стили, только при необходимости */
